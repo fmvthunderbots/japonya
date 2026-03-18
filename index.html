@@ -140,6 +140,8 @@
         }
         .yemek > li::before { content: '🥢'; position: absolute; left: 0; }
         .kafe > li::before { content: '☕'; position: absolute; left: 0; }
+        
+        /* Genel Link Stilleri (Aşağıdaki listeler için) */
         a {
             color: #1976d2;
             text-decoration: none;
@@ -155,6 +157,20 @@
             background: #d32f2f;
             color: #fff;
         }
+        
+        /* Tablo İçi Link Stilleri (Mekanlar ve Ulaşım İçin Sadeleştirilmiş) */
+        td a {
+            background: transparent;
+            padding: 0;
+            color: #d32f2f;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        td a:hover {
+            background: transparent;
+            color: #b71c1c;
+        }
+
         .desc {
             display: block;
             font-size: 0.95em;
@@ -225,14 +241,14 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">21:00</td>
-                    <td data-label="Etkinlik">Tokyo'ya Varış ve Pasaport Kontrolü</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Narita+Airport" target="_blank">Tokyo'ya Varış ve Pasaport Kontrolü</a></td>
                     <td data-label="Ulaşım">-</td>
                     <td data-label="Notlar">Havalimanı işlemleri</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">22:30</td>
-                    <td data-label="Etkinlik">Oteline Geçiş (Shinjuku/Ueno)</td>
-                    <td data-label="Ulaşım">JR Narita Express veya Limuzin Otobüs</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Shinjuku+Station" target="_blank">Oteline Geçiş (Shinjuku/Ueno)</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Narita+Express" target="_blank">JR Narita Express</a> veya <a href="https://www.google.com/maps/search/?api=1&query=Airport+Limousine+Bus+Tokyo" target="_blank">Limuzin Otobüs</a></td>
                     <td data-label="Notlar">Otele yerleşme ve dinlenme</td>
                 </tr>
             </tbody>
@@ -269,31 +285,31 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">08:00</td>
-                    <td data-label="Etkinlik">Tokyo'dan Kyoto'ya Hareket</td>
-                    <td data-label="Ulaşım">Tokaido Shinkansen (Hızlı Tren)</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Station" target="_blank">Tokyo'dan Kyoto'ya Hareket</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Tokaido+Shinkansen" target="_blank">Tokaido Shinkansen (Hızlı Tren)</a></td>
                     <td data-label="Notlar">Yolda yemek için istasyondan "Ekiben" alın</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">11:00</td>
-                    <td data-label="Etkinlik">Kyoto Otele Eşya Bırakma</td>
-                    <td data-label="Ulaşım">Şehir Otobüsü</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Kyoto+Station" target="_blank">Kyoto Otele Eşya Bırakma</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Kyoto+City+Bus" target="_blank">Şehir Otobüsü</a></td>
                     <td data-label="Notlar">Kyoto'da ana ulaşımınız hep otobüs olacak</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">13:00</td>
-                    <td data-label="Etkinlik">Kinkaku-ji (Altın Tapınak)</td>
-                    <td data-label="Ulaşım">Şehir Otobüsü (No. 205 veya 101)</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Kinkaku-ji" target="_blank">Kinkaku-ji (Altın Tapınak)</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Kyoto+City+Bus+205" target="_blank">Şehir Otobüsü (No. 205 veya 101)</a></td>
                     <td data-label="Notlar">Tapınak çevresinde harika kareler</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">16:30</td>
-                    <td data-label="Etkinlik">Gion Bölgesinde Yürüyüş</td>
-                    <td data-label="Ulaşım">Şehir Otobüsü (No. 12 veya 59)</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Gion+Kyoto" target="_blank">Gion Bölgesinde Yürüyüş</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Kyoto+City+Bus+12" target="_blank">Şehir Otobüsü (No. 12 veya 59)</a></td>
                     <td data-label="Notlar">Şanslıysanız geyşaları görebilirsiniz</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">19:00</td>
-                    <td data-label="Etkinlik">Akşam Yemeği: Nishiki veya Pontocho</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Nishiki+Market" target="_blank">Akşam Yemeği: Nishiki</a> veya <a href="https://www.google.com/maps/search/?api=1&query=Pontocho+Alley" target="_blank">Pontocho</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">Ayaküstü atıştırmalıklarla bütçe dostu</td>
                 </tr>
@@ -331,13 +347,13 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">08:30</td>
-                    <td data-label="Etkinlik">Arashiyama Bambu Ormanı</td>
-                    <td data-label="Ulaşım">JR Sagano Hattı (Yer üstü)</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" target="_blank">Arashiyama Bambu Ormanı</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Sagano+Line" target="_blank">JR Sagano Hattı (Yer üstü)</a></td>
                     <td data-label="Notlar">Kalabalıklaşmadan sabah ışığında</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">11:30</td>
-                    <td data-label="Etkinlik">Tenryu-ji Tapınağı ve Nehir</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Tenryu-ji+Temple" target="_blank">Tenryu-ji Tapınağı ve Nehir</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">Nehir kenarında dinlenme</td>
                 </tr>
@@ -349,14 +365,14 @@
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">15:30</td>
-                    <td data-label="Etkinlik">Togetsukyo Köprüsü</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Togetsukyo+Bridge" target="_blank">Togetsukyo Köprüsü</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">-</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">18:00</td>
-                    <td data-label="Etkinlik">Kyoto Merkeze Dönüş</td>
-                    <td data-label="Ulaşım">JR Sagano Hattı</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Kyoto+Station" target="_blank">Kyoto Merkeze Dönüş</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Sagano+Line" target="_blank">JR Sagano Hattı</a></td>
                     <td data-label="Notlar">Serbest Zaman</td>
                 </tr>
             </tbody>
@@ -393,8 +409,8 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">08:00</td>
-                    <td data-label="Etkinlik">Fushimi Inari Taisha (Turuncu Kapılar)</td>
-                    <td data-label="Ulaşım">JR Nara Hattı (Inari İst.)</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Fushimi+Inari+Taisha" target="_blank">Fushimi Inari Taisha (Turuncu Kapılar)</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Nara+Line" target="_blank">JR Nara Hattı (Inari İst.)</a></td>
                     <td data-label="Notlar">Dağ eteklerinde doğa yürüyüşü</td>
                 </tr>
                 <tr>
@@ -405,13 +421,13 @@
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">14:00</td>
-                    <td data-label="Etkinlik">Kiyomizu-dera Tapınağı</td>
-                    <td data-label="Ulaşım">Şehir Otobüsü</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera" target="_blank">Kiyomizu-dera Tapınağı</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Kyoto+City+Bus" target="_blank">Şehir Otobüsü</a></td>
                     <td data-label="Notlar">Tepeden Kyoto manzarası</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">16:30</td>
-                    <td data-label="Etkinlik">Higashiyama Sokakları (Sannenzaka)</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Sannenzaka+Kyoto" target="_blank">Higashiyama Sokakları (Sannenzaka)</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">Ahşap evlerin olduğu sokaklarda fotoğraf</td>
                 </tr>
@@ -449,31 +465,31 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">09:00</td>
-                    <td data-label="Etkinlik">Kyoto'dan Osaka'ya Geçiş</td>
-                    <td data-label="Ulaşım">JR Kyoto Hattı (Lokal Tren)</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Station" target="_blank">Kyoto'dan Osaka'ya Geçiş</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Kyoto+Line" target="_blank">JR Kyoto Hattı (Lokal Tren)</a></td>
                     <td data-label="Notlar">Çok uygun fiyatlı yer üstü geçişi</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">10:30</td>
                     <td data-label="Etkinlik">Osaka Otele Eşya Bırakma</td>
-                    <td data-label="Ulaşım">JR Osaka Loop Line</td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Osaka+Loop+Line" target="_blank">JR Osaka Loop Line</a></td>
                     <td data-label="Notlar">-</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">12:00</td>
-                    <td data-label="Etkinlik">Namba Bölgesi Keşfi</td>
-                    <td data-label="Ulaşım">JR Yamatoji Hattı</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Namba+Osaka" target="_blank">Namba Bölgesi Keşfi</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Yamatoji+Line" target="_blank">JR Yamatoji Hattı</a></td>
                     <td data-label="Notlar">-</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">15:00</td>
-                    <td data-label="Etkinlik">Dotonbori Keşfi</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank">Dotonbori Keşfi</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">-</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">19:00</td>
-                    <td data-label="Etkinlik">Akşam Yemeği ve Glico Adam</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Glico+Sign+Osaka" target="_blank">Akşam Yemeği ve Glico Adam</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">Takoyaki ve Okonomiyaki lezzetleri</td>
                 </tr>
@@ -511,8 +527,8 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">09:30</td>
-                    <td data-label="Etkinlik">Osaka Kalesi ve Parkı</td>
-                    <td data-label="Ulaşım">JR Osaka Loop Line</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Castle" target="_blank">Osaka Kalesi ve Parkı</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Osaka+Loop+Line" target="_blank">JR Osaka Loop Line</a></td>
                     <td data-label="Notlar">Devasa kale parkında yürüyüş</td>
                 </tr>
                 <tr>
@@ -523,8 +539,8 @@
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">15:00</td>
-                    <td data-label="Etkinlik">Shinsekai Bölgesi ve Tsutenkaku Kulesi</td>
-                    <td data-label="Ulaşım">JR Osaka Loop Line</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Shinsekai+Osaka" target="_blank">Shinsekai Bölgesi ve Tsutenkaku Kulesi</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Osaka+Loop+Line" target="_blank">JR Osaka Loop Line</a></td>
                     <td data-label="Notlar">Retro Japonya atmosferi</td>
                 </tr>
                 <tr>
@@ -567,14 +583,14 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">09:30</td>
-                    <td data-label="Etkinlik">Osaka'dan Kobe'ye Günübirlik Geçiş</td>
-                    <td data-label="Ulaşım">JR Kobe Hattı (Lokal Tren)</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Kobe+Station" target="_blank">Osaka'dan Kobe'ye Günübirlik Geçiş</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Kobe+Line" target="_blank">JR Kobe Hattı (Lokal Tren)</a></td>
                     <td data-label="Notlar">-</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">11:00</td>
-                    <td data-label="Etkinlik">Kitano-cho (Tarihi Batı Evleri)</td>
-                    <td data-label="Ulaşım">Şehir Otobüsü</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Kitano-cho+Kobe" target="_blank">Kitano-cho (Tarihi Batı Evleri)</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=City+Loop+Bus+Kobe" target="_blank">Şehir Otobüsü</a></td>
                     <td data-label="Notlar">-</td>
                 </tr>
                 <tr>
@@ -585,14 +601,14 @@
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">16:00</td>
-                    <td data-label="Etkinlik">Meriken Park ve Kobe Limanı</td>
-                    <td data-label="Ulaşım">City Loop Bus / Yürüyüş</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Meriken+Park+Kobe" target="_blank">Meriken Park ve Kobe Limanı</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=City+Loop+Bus+Kobe" target="_blank">City Loop Bus</a> / Yürüyüş</td>
                     <td data-label="Notlar">Limanda gün batımı fotoğrafları</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">19:30</td>
-                    <td data-label="Etkinlik">Osaka'ya Dönüş</td>
-                    <td data-label="Ulaşım">JR Kobe Hattı</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Osaka+Station" target="_blank">Osaka'ya Dönüş</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Kobe+Line" target="_blank">JR Kobe Hattı</a></td>
                     <td data-label="Notlar">-</td>
                 </tr>
             </tbody>
@@ -629,32 +645,32 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">09:00</td>
-                    <td data-label="Etkinlik">Osaka'dan Tokyo'ya Dönüş</td>
-                    <td data-label="Ulaşım">Tokaido Shinkansen</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Station" target="_blank">Osaka'dan Tokyo'ya Dönüş</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Tokaido+Shinkansen" target="_blank">Tokaido Shinkansen</a></td>
                     <td data-label="Notlar">-</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">12:30</td>
                     <td data-label="Etkinlik">Tokyo Otele Yerleşme</td>
-                    <td data-label="Ulaşım">JR Yamanote Hattı</td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Yamanote+Line" target="_blank">JR Yamanote Hattı</a></td>
                     <td data-label="Notlar">-</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">14:00</td>
-                    <td data-label="Etkinlik">Akihabara (Anime/Elektronik)</td>
-                    <td data-label="Ulaşım">JR Yamanote Hattı</td>
-                    <td data-label="Notlar">Işıklı tabelalar, mağazalar</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Akihabara" target="_blank">Akihabara (Anime/Elektronik)</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Yamanote+Line" target="_blank">JR Yamanote Hattı</a></td>
+                    <td data-label="Notlar">Batıkan Bey için sneaker arayışları da buradaki çevre dükkanlarda yapılabilir</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">17:00</td>
-                    <td data-label="Etkinlik">Tema Kafe Deneyimi</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Maid+Cafe+Akihabara" target="_blank">Tema Kafe Deneyimi</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">Akihabara'da Anime/Maid Cafe</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">19:30</td>
-                    <td data-label="Etkinlik">Akşam Yemeği: Ueno Ameyoko</td>
-                    <td data-label="Ulaşım">JR Yamanote Hattı</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Ameyoko" target="_blank">Akşam Yemeği: Ueno Ameyoko</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Yamanote+Line" target="_blank">JR Yamanote Hattı</a></td>
                     <td data-label="Notlar">Açık hava pazarında ucuz sokak yemekleri</td>
                 </tr>
             </tbody>
@@ -691,8 +707,8 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">10:00</td>
-                    <td data-label="Etkinlik">Shimokitazawa (Vintage Merkezi)</td>
-                    <td data-label="Ulaşım">Keio Inokashira Hattı</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Shimokitazawa" target="_blank">Shimokitazawa (Vintage Merkezi)</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Keio+Inokashira+Line" target="_blank">Keio Inokashira Hattı</a></td>
                     <td data-label="Notlar">Vintage çanta ve tişört arayışı</td>
                 </tr>
                 <tr>
@@ -703,13 +719,13 @@
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">15:00</td>
-                    <td data-label="Etkinlik">Shibuya Yaya Geçidi ve Hachiko</td>
-                    <td data-label="Ulaşım">Keio / JR Yamanote</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Shibuya+Crossing" target="_blank">Shibuya Yaya Geçidi ve Hachiko</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Keio+Inokashira+Line" target="_blank">Keio</a> / <a href="https://www.google.com/maps/search/?api=1&query=JR+Yamanote+Line" target="_blank">JR Yamanote</a></td>
                     <td data-label="Notlar">Dünyanın en kalabalık geçidi</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">16:30</td>
-                    <td data-label="Etkinlik">Shibuya PARCO & Jump Shop</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Shibuya+PARCO" target="_blank">Shibuya PARCO & Jump Shop</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">Death Note, anime alışverişi</td>
                 </tr>
@@ -753,25 +769,25 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">08:30</td>
-                    <td data-label="Etkinlik">Tokyo'dan Fuji'ye Geçiş</td>
-                    <td data-label="Ulaşım">Shinjuku'dan Otobüs (Highway Bus)</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Kawaguchiko+Station" target="_blank">Tokyo'dan Fuji'ye Geçiş</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Shinjuku+Highway+Bus+Terminal" target="_blank">Shinjuku'dan Otobüs (Highway Bus)</a></td>
                     <td data-label="Notlar">Fuji manzaralı yaklaşık 2 saatlik yol</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">11:00</td>
                     <td data-label="Etkinlik">Fuji Etekleri / Otele Eşya</td>
-                    <td data-label="Ulaşım">Kawaguchiko Red Line Otobüsü</td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Kawaguchiko+Red+Line+Bus" target="_blank">Kawaguchiko Red Line Otobüsü</a></td>
                     <td data-label="Notlar">-</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">12:30</td>
-                    <td data-label="Etkinlik">Chureito Pagodası & Oishi Parkı</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Chureito+Pagoda" target="_blank">Chureito Pagodası</a> & <a href="https://www.google.com/maps/search/?api=1&query=Oishi+Park" target="_blank">Oishi Parkı</a></td>
                     <td data-label="Ulaşım">Lokal Otobüs</td>
                     <td data-label="Notlar">En ikonik fotoğraf noktaları</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">16:00</td>
-                    <td data-label="Etkinlik">Göl Kenarı Yürüyüşü</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Lake+Kawaguchi" target="_blank">Göl Kenarı Yürüyüşü</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">Sakin doğa yürüyüşü</td>
                 </tr>
@@ -815,25 +831,25 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">09:30</td>
-                    <td data-label="Etkinlik">Mt. Fuji Panoramic Ropeway</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Mt.+Fuji+Panoramic+Ropeway" target="_blank">Mt. Fuji Panoramic Ropeway</a></td>
                     <td data-label="Ulaşım">Yürüyüş / Lokal Otobüs</td>
                     <td data-label="Notlar">Yukarıdan göl ve Fuji manzarası</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">13:00</td>
-                    <td data-label="Etkinlik">Tokyo'ya Dönüş</td>
-                    <td data-label="Ulaşım">Highway Bus (Shinjuku'ya)</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Shinjuku+Station" target="_blank">Tokyo'ya Dönüş</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Shinjuku+Highway+Bus+Terminal" target="_blank">Highway Bus (Shinjuku'ya)</a></td>
                     <td data-label="Notlar">-</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">16:00</td>
-                    <td data-label="Etkinlik">Harajuku: Takeshita Caddesi</td>
-                    <td data-label="Ulaşım">JR Yamanote Hattı</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Takeshita+Street" target="_blank">Harajuku: Takeshita Caddesi</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Yamanote+Line" target="_blank">JR Yamanote Hattı</a></td>
                     <td data-label="Notlar">Çılgın gençlik modası, krepler</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">18:30</td>
-                    <td data-label="Etkinlik">Yoyogi Parkı ve Meiji Tapınağı</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Yoyogi+Park" target="_blank">Yoyogi Parkı</a> ve <a href="https://www.google.com/maps/search/?api=1&query=Meiji+Jingu" target="_blank">Meiji Tapınağı</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">Ağaçlar içinde tapınak kompleksi</td>
                 </tr>
@@ -871,20 +887,20 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">10:00</td>
-                    <td data-label="Etkinlik">Asakusa Senso-ji Tapınağı</td>
-                    <td data-label="Ulaşım">Tokyo Water Bus / Otobüs</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Senso-ji" target="_blank">Asakusa Senso-ji Tapınağı</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Water+Bus" target="_blank">Tokyo Water Bus</a> / Otobüs</td>
                     <td data-label="Notlar">Nehir veya yer üstü ulaşımla varış</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">12:30</td>
-                    <td data-label="Etkinlik">Nakamise Caddesi Alışverişi</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Nakamise+Shopping+Street" target="_blank">Nakamise Caddesi Alışverişi</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">Geleneksel hediyelik eşyalar</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">14:00</td>
-                    <td data-label="Etkinlik">Ikebukuro Animate Flagship Mağazası</td>
-                    <td data-label="Ulaşım">JR Yamanote Hattı</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Animate+Ikebukuro" target="_blank">Ikebukuro Animate Flagship Mağazası</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Yamanote+Line" target="_blank">JR Yamanote Hattı</a></td>
                     <td data-label="Notlar">Dünyanın en büyük anime mağazası</td>
                 </tr>
                 <tr>
@@ -895,7 +911,7 @@
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">19:30</td>
-                    <td data-label="Etkinlik">Akşam Yemeği: Yoshinoya/Matsuya</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Yoshinoya+Ikebukuro" target="_blank">Akşam Yemeği: Yoshinoya/Matsuya</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">Uygun fiyatlı dana etli pirinç (Gyudon)</td>
                 </tr>
@@ -933,13 +949,13 @@
             <tbody>
                 <tr>
                     <td class="time-col" data-label="Saat">10:30</td>
-                    <td data-label="Etkinlik">Ginza Bölgesi</td>
-                    <td data-label="Ulaşım">JR Yamanote Hattı (Yurakucho İst.)</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Ginza" target="_blank">Ginza Bölgesi</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=JR+Yamanote+Line" target="_blank">JR Yamanote Hattı (Yurakucho İst.)</a></td>
                     <td data-label="Notlar">Geniş caddeler, lüks vitrinler</td>
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">13:00</td>
-                    <td data-label="Etkinlik">Don Quijote (Donki) Alışverişi</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Don+Quijote+Ginza" target="_blank">Don Quijote (Donki) Alışverişi</a></td>
                     <td data-label="Ulaşım">Yürüyüş</td>
                     <td data-label="Notlar">Matcha çikolatalar, hediyelikler</td>
                 </tr>
@@ -995,8 +1011,8 @@
                 </tr>
                 <tr>
                     <td class="time-col" data-label="Saat">11:00</td>
-                    <td data-label="Etkinlik">Havalimanına Geçiş</td>
-                    <td data-label="Ulaşım">JR Narita Express / Limuzin Otobüs</td>
+                    <td data-label="Etkinlik"><a href="https://www.google.com/maps/search/?api=1&query=Narita+Airport" target="_blank">Havalimanına Geçiş</a></td>
+                    <td data-label="Ulaşım"><a href="https://www.google.com/maps/search/?api=1&query=Narita+Express" target="_blank">JR Narita Express</a> / <a href="https://www.google.com/maps/search/?api=1&query=Airport+Limousine+Bus+Tokyo" target="_blank">Limuzin Otobüs</a></td>
                     <td data-label="Notlar">Dönüş yolculuğu</td>
                 </tr>
             </tbody>
