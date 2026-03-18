@@ -139,6 +139,8 @@
         }
         .yemek > li::before { content: '🥢'; position: absolute; left: 0; top: 2px; font-size: 1.2em; }
         .kafe > li::before { content: '☕'; position: absolute; left: 0; top: 2px; font-size: 1.2em; }
+        
+        /* Tablo ve Liste İçi Link Tasarımı */
         a {
             color: #1976d2;
             text-decoration: none;
@@ -148,7 +150,11 @@
             border-radius: 4px;
             transition: 0.2s;
             display: inline-block;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
+        }
+        td a {
+            font-size: 0.95em;
+            padding: 2px 6px;
         }
         a:hover {
             background: #d32f2f;
@@ -217,8 +223,18 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">22:00</td><td data-label="Bölge">Tokyo</td><td data-label="Etkinlik">Havalimanına İniş ve Bagaj Alımı</td><td data-label="Notlar">Narita veya Haneda Havalimanı.</td></tr>
-                <tr><td class="time-col" data-label="Saat">23:30</td><td data-label="Bölge">Tokyo</td><td data-label="Etkinlik">Otele yerleşme ve dinlenme</td><td data-label="Notlar">Otel: Tokyo İst. veya Shinagawa (JR Hattı).</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">22:00</td>
+                    <td data-label="Bölge">Tokyo</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/naritairport" target="_blank">Havalimanına İniş ve Bagaj Alımı</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/naritaexpress" target="_blank">Narita Express (N'EX) Gişeleri</a> veya Haneda Monoray.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">23:30</td>
+                    <td data-label="Bölge">Tokyo</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/tokyostation" target="_blank">Otele yerleşme ve dinlenme</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jryamanote" target="_blank">JR Yamanote Hattı</a> ile Tokyo İst. veya Shinagawa bölgesine geçiş.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -246,11 +262,36 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">09:30</td><td data-label="Bölge">Tok ➔ Kyo</td><td data-label="Etkinlik">Shinkansen ile Kyoto'ya gidiş</td><td data-label="Notlar">Bilet sağdan (E koltuğu) alınır, Fuji izlenir.</td></tr>
-                <tr><td class="time-col" data-label="Saat">12:30</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Otele yerleşme</td><td data-label="Notlar">Merkezden otele otobüsle geçiş.</td></tr>
-                <tr><td class="time-col" data-label="Saat">14:30</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Gion Bölgesi ve Yukata</td><td data-label="Notlar">Otobüsle. Ahşap sokaklarda geleneksel yürüyüş.</td></tr>
-                <tr><td class="time-col" data-label="Saat">16:00</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Geleneksel Çay Seremonisi</td><td data-label="Notlar">Camellia veya Maikoya'da çay felsefesi.</td></tr>
-                <tr><td class="time-col" data-label="Saat">17:30</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Kiyomizu-dera Tapınağı</td><td data-label="Notlar">Yokuş yukarı yürüyüş, gün batımında fotoğraflar.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">09:30</td>
+                    <td data-label="Bölge">Tok ➔ Kyo</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/tokyoshinkansen" target="_blank">Shinkansen ile Kyoto'ya gidiş</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/tokaidoshinkansen" target="_blank">Tokaido Shinkansen Hattı</a> (Bilet sağdan "E" koltuğu alınır, Fuji izlenir).</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">12:30</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/kyotostation" target="_blank">Otele yerleşme</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/kyotobus" target="_blank">Kyoto Şehir Otobüsü (No. 206)</a> ile merkeze geçiş.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">14:30</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/gion" target="_blank">Gion Bölgesi ve Yukata</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/gionbus" target="_blank">Otobüs No. 12 veya 206</a>. Ahşap sokaklarda yürüyüş.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">16:00</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/camelliatea" target="_blank">Geleneksel Çay Seremonisi</a></td>
+                    <td data-label="Notlar">Gion içerisindeki Camellia veya Maikoya çay evlerinde.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">17:30</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/kiyomizudera" target="_blank">Kiyomizu-dera Tapınağı</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/kiyomizubus" target="_blank">Otobüs No. 207</a> veya yokuş yukarı yürüyüş. Gün batımı.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -260,7 +301,7 @@
             <li><a href="https://maps.app.goo.gl/gionkaryo" target="_blank">Gion Karyo</a> <span class="desc">Geleneksel Kaiseki menüleri (Çok şık, otantik ve çok tabaklı Japon deneyimi).</span></li>
             <li><a href="https://maps.app.goo.gl/okonomiyakikatsu" target="_blank">Okonomiyaki Katsu</a> <span class="desc">Samimi ortamda sıcak sacda Japon krebi/pizzası yapan lokal yer.</span></li>
             <li><a href="https://maps.app.goo.gl/yagura" target="_blank">Yagura</a> <span class="desc">Asırlık bir dükkanda geleneksel Soba (karabuğday eriştesi) ve Udon.</span></li>
-            <li><a href="https://maps.app.goo.gl/kichikichi" target="_blank">Kichi Kichi Omurice</a> <span class="desc">Şovuyla meşhur olan, ortasından kesilince akan ikonik Japon omleti. (Rezervasyon şart).</span></li>
+            <li><a href="https://maps.app.goo.gl/kichikichi" target="_blank">Kichi Kichi Omurice</a> <span class="desc">Şovuyla meşhur olan, ortasından kesilince akan ikonik Japon omleti.</span></li>
         </ul>
 
         <h3>☕ Kafeler</h3>
@@ -278,10 +319,30 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">08:30</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Fushimi Inari (Bin Kapılı Tapınak)</td><td data-label="Notlar">JR Treni (5 dk). Kızıl kapılar arası tırmanış.</td></tr>
-                <tr><td class="time-col" data-label="Saat">12:30</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Nishiki Pazarı</td><td data-label="Notlar">Otobüsle dönüş. Sokak lezzetleriyle öğle yemeği.</td></tr>
-                <tr><td class="time-col" data-label="Saat">14:30</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Teramachi Sokağı</td><td data-label="Notlar">Geleneksel tütsü (Shoyeido) ve seramik.</td></tr>
-                <tr><td class="time-col" data-label="Saat">18:30</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Pontocho Sokağı</td><td data-label="Notlar">Nehir kenarındaki fenerli sokakta akşam yemeği.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">08:30</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/fushimi" target="_blank">Fushimi Inari Taisha</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jrnaraline" target="_blank">JR Nara Hattı (Inari İstasyonu)</a> (5 dk). Kızıl kapılar tırmanışı.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">12:30</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/nishiki" target="_blank">Nishiki Pazarı</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jrnaraback" target="_blank">JR Nara Hattı ile dönüş</a>. Sokak lezzetleriyle öğle yemeği.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">14:30</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/teramachi" target="_blank">Teramachi Sokağı</a></td>
+                    <td data-label="Notlar">Nishiki'den yürüyerek geçiş. Geleneksel tütsü ve seramik dükkanları.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">18:30</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/pontocho" target="_blank">Pontocho Sokağı</a></td>
+                    <td data-label="Notlar">Yürüyerek. Nehir kenarındaki fenerli dar sokakta akşam yemeği.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -309,10 +370,30 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">09:30</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Arashiyama Bambu Ormanı</td><td data-label="Notlar">JR Treni. Bambular arasında sabah yürüyüşü.</td></tr>
-                <tr><td class="time-col" data-label="Saat">13:00</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Kobe veya Wagyu Bifteği (Öğle)</td><td data-label="Notlar">Şık bir Teppanyaki restoranında bütçe dostu et.</td></tr>
-                <tr><td class="time-col" data-label="Saat">15:30</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Kinkaku-ji (Altın Tapınak)</td><td data-label="Notlar">Otobüsle. Altın kaplamalı tapınak ziyareti.</td></tr>
-                <tr><td class="time-col" data-label="Saat">17:00</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Ryoan-ji Tapınağı</td><td data-label="Notlar">Otobüsle. Kum ve kaya Zen bahçesinde dinginlik.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">09:30</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/arashiyama" target="_blank">Arashiyama Bambu Ormanı</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jrsaganoline" target="_blank">JR Sagano Hattı (Saga-Arashiyama)</a>. Bambular arasında yürüyüş.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">13:00</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/kobebeef" target="_blank">Kobe/Wagyu Bifteği (Öğle)</a></td>
+                    <td data-label="Notlar">Arashiyama içerisinde yürüyerek ulaşım. Öğle menüleri bütçe dostudur.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">15:30</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/kinkakuji" target="_blank">Kinkaku-ji (Altın Tapınak)</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/bus205" target="_blank">Şehir Otobüsü (No. 205 veya 101)</a>. Altın kaplamalı tapınak.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">17:00</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/ryoanji" target="_blank">Ryoan-ji Tapınağı</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/bus59" target="_blank">Şehir Otobüsü (No. 59)</a>. Kum ve kaya Zen bahçesinde dinginlik.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -321,7 +402,7 @@
             <li><a href="https://maps.app.goo.gl/steakmisono" target="_blank">Steak House Misono</a> <span class="desc">Teppanyaki'nin (sac) mucidi olan restoran, "lunch set" ile harika Kobe/Wagyu eti.</span></li>
             <li><a href="https://maps.app.goo.gl/steakotsuka" target="_blank">Steak Otsuka</a> <span class="desc">Bambu ormanı yakınlarında, dağ gibi Wagyu Rosto kasesi (Erken gitmek şart).</span></li>
             <li><a href="https://maps.app.goo.gl/arashiyamayosh" target="_blank">Arashiyama Yoshimura</a> <span class="desc">Togetsukyo köprüsü ve nehir manzarasına karşı Soba (erişte) menüleri.</span></li>
-            <li><a href="https://maps.app.goo.gl/shigetsu" target="_blank">Shigetsu (Tenryu-ji)</a> <span class="desc">Tapınak bahçesinde, Budist rahiplerin felsefesiyle hazırlanan vegan (Shojin Ryori) menü.</span></li>
+            <li><a href="https://maps.app.goo.gl/shigetsu" target="_blank">Shigetsu (Tenryu-ji)</a> <span class="desc">Tapınak bahçesinde, Budist rahiplerin felsefesiyle hazırlanan vegan menü.</span></li>
             <li><a href="https://maps.app.goo.gl/unagihirokawa" target="_blank">Unagi Hirokawa</a> <span class="desc">Michelin yıldızlı, özel sosta kızarmış muazzam yılan balığı lokantası.</span></li>
         </ul>
 
@@ -340,10 +421,30 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">10:00</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Ginkaku-ji (Gümüş Tapınak)</td><td data-label="Notlar">Otobüsle. Sabah tapınak sakinliği.</td></tr>
-                <tr><td class="time-col" data-label="Saat">11:30</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Filozofun Yolu (Philosopher's Path)</td><td data-label="Notlar">Su kanalları boyunca ağaçlar altında yürüyüş.</td></tr>
-                <tr><td class="time-col" data-label="Saat">13:30</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Tapınak Yemeği / Yudofu</td><td data-label="Notlar">Shojin Ryori veya sıcak tofu molası.</td></tr>
-                <tr><td class="time-col" data-label="Saat">15:00</td><td data-label="Bölge">Kyoto</td><td data-label="Etkinlik">Nanzen-ji ve Koi Havuzları</td><td data-label="Notlar">Yürüyerek. Tarihi su kemeri ve dev Koi balıkları.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">10:00</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/ginkakuji" target="_blank">Ginkaku-ji (Gümüş Tapınak)</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/bus5" target="_blank">Otobüs (No. 5 veya 17)</a>. Sabahın erken saatlerinde tapınak sakinliği.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">11:30</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/philosopherspath" target="_blank">Filozofun Yolu</a></td>
+                    <td data-label="Notlar">Ginkaku-ji'den Nanzen-ji'ye doğru su kanalı boyu yürüyüş.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">13:30</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/yudofu" target="_blank">Tapınak Yemeği / Yudofu</a></td>
+                    <td data-label="Notlar">Nanzen-ji çevresindeki tarihi restoranlarda sıcak tofu molası.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">15:00</td>
+                    <td data-label="Bölge">Kyoto</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/nanzenji" target="_blank">Nanzen-ji ve Koi Havuzları</a></td>
+                    <td data-label="Notlar">Yürüyerek. Tarihi Roma tipi su kemeri ve dev balıklar.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -371,18 +472,43 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">10:30</td><td data-label="Bölge">Kyo ➔ Tok</td><td data-label="Etkinlik">Shinkansen ile Tokyo'ya Dönüş</td><td data-label="Notlar">Biletleri gişeden alın, Tokyo'ya rahat dönüş.</td></tr>
-                <tr><td class="time-col" data-label="Saat">13:30</td><td data-label="Bölge">Tokyo</td><td data-label="Etkinlik">Otele yerleşme</td><td data-label="Notlar">JR Yamanote trenine yakın merkez oteli.</td></tr>
-                <tr><td class="time-col" data-label="Saat">15:00</td><td data-label="Bölge">Ueno</td><td data-label="Etkinlik">Shinobazu Göleti</td><td data-label="Notlar">JR Ueno. Dev lotus (nilüfer) çiçekleri.</td></tr>
-                <tr><td class="time-col" data-label="Saat">16:30</td><td data-label="Bölge">Ueno</td><td data-label="Etkinlik">Ameyoko Pazarı</td><td data-label="Notlar">Eski geleneksel açık hava pazarında gezi.</td></tr>
-                <tr><td class="time-col" data-label="Saat">18:30</td><td data-label="Bölge">Ueno</td><td data-label="Etkinlik">Dönen Sushi (Kaiten-sushi)</td><td data-label="Notlar">Eğlenceli ve banttan dönen sushi akşam yemeği.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">10:30</td>
+                    <td data-label="Bölge">Kyo ➔ Tok</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/tokyoshinkansen" target="_blank">Shinkansen ile Tokyo'ya Dönüş</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/tokaidoshinkansen" target="_blank">Tokaido Hattı</a> ile hızlıca Tokyo istasyonuna dönüş.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">13:30</td>
+                    <td data-label="Bölge">Tokyo</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/uenostation" target="_blank">Otele yerleşme</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jryamanote" target="_blank">JR Yamanote Hattı</a> kullanarak merkezi otele transfer.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">15:00</td>
+                    <td data-label="Bölge">Ueno</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/shinobazu" target="_blank">Shinobazu Göleti</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jrueno" target="_blank">JR Ueno İstasyonu</a>. Dev nilüfer çiçekleri arasında yürüyüş.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">16:30</td>
+                    <td data-label="Bölge">Ueno</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/ameyoko" target="_blank">Ameyoko Pazarı</a></td>
+                    <td data-label="Notlar">Yürüyerek. İkinci Dünya Savaşı'ndan kalma açık hava pazarı.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">18:30</td>
+                    <td data-label="Bölge">Ueno</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/kaitensushi" target="_blank">Dönen Sushi (Kaiten-sushi)</a></td>
+                    <td data-label="Notlar">Ueno çevresinde eğlenceli ve banttan dönen sushi yemeği.</td>
+                </tr>
             </tbody>
         </table>
 
         <h3>🥢 Yemek Mekanları (Ueno Çevresi)</h3>
         <ul class="yemek">
-            <li><a href="https://maps.app.goo.gl/kurasushiueno" target="_blank">Kura Sushi Ueno</a> <span class="desc">Banttan dönen tabaklarla, yedikçe ekrandan oyun oynatan çok eğlenceli zincir.</span></li>
-            <li><a href="https://maps.app.goo.gl/sushiroueno" target="_blank">Sushiro Ueno</a> <span class="desc">Japonların en çok tercih ettiği, fiyat/performansı inanılmaz yüksek dönen sushici.</span></li>
+            <li><a href="https://maps.app.goo.gl/kurasushiueno" target="_blank">Kura Sushi Ueno</a> <span class="desc">Banttan dönen tabaklarla, yedikçe ekrandan oyun oynatan eğlenceli zincir.</span></li>
+            <li><a href="https://maps.app.goo.gl/sushiroueno" target="_blank">Sushiro Ueno</a> <span class="desc">Japonların en çok tercih ettiği, fiyat/performansı yüksek dönen sushici.</span></li>
             <li><a href="https://maps.app.goo.gl/gyukatsuueno" target="_blank">Gyukatsu Motomura Ueno</a> <span class="desc">Küçük taş ızgaranızda çıtır dana etlerini cızırdatarak yediğiniz muazzam menü.</span></li>
             <li><a href="https://maps.app.goo.gl/isomaruueno" target="_blank">Isomaru Suisan Ueno</a> <span class="desc">Ameyoko'da cıvıl cıvıl bir Izakaya, deniz ürünlerini kendi masanızda pişirin.</span></li>
             <li><a href="https://maps.app.goo.gl/yamabeokachi" target="_blank">Yamabe Okachimachi</a> <span class="desc">Pazar yakınlarındaki en meşhur ve doyurucu Tonkatsu (domuz/tavuk panesi).</span></li>
@@ -403,27 +529,52 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">10:30</td><td data-label="Bölge">Yanaka</td><td data-label="Etkinlik">Yanaka Ginza</td><td data-label="Notlar">JR Nippori. 1950'lerden kalma ahşap sokaklar.</td></tr>
-                <tr><td class="time-col" data-label="Saat">13:30</td><td data-label="Bölge">Akihabara</td><td data-label="Etkinlik">Yodobashi Camera Alışverişi</td><td data-label="Notlar">JR Akihabara. Joy-Con ve Lego Robot alışverişi.</td></tr>
-                <tr><td class="time-col" data-label="Saat">16:00</td><td data-label="Bölge">Akihabara</td><td data-label="Etkinlik">Anime Figür ve Manga Avı</td><td data-label="Notlar">Mandarake Complex (Death Note vb. figürleri).</td></tr>
-                <tr><td class="time-col" data-label="Saat">18:00</td><td data-label="Bölge">Akihabara</td><td data-label="Etkinlik">Anime Temalı Kafe</td><td data-label="Notlar">Tematik kafe deneyimi (Örn: Square Enix Cafe).</td></tr>
-                <tr><td class="time-col" data-label="Saat">20:00</td><td data-label="Bölge">Akihabara</td><td data-label="Etkinlik">Kanda Myojin Tapınağı</td><td data-label="Notlar">Alışveriş yorgunluğunu samuray tapınağında atma.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">10:30</td>
+                    <td data-label="Bölge">Yanaka</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/yanakaginza" target="_blank">Yanaka Ginza</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jrnippori" target="_blank">JR Yamanote Hattı (Nippori)</a>. 1950'lerden kalma ahşap sokaklar.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">13:30</td>
+                    <td data-label="Bölge">Akihabara</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/yodobashiakiba" target="_blank">Yodobashi Camera Alışverişi</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jrakihabara" target="_blank">JR Akihabara İstasyonu</a>. Joy-Con ve dev elektronik mağazası.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">16:00</td>
+                    <td data-label="Bölge">Akihabara</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/mandarake" target="_blank">Anime Figür ve Manga Avı</a></td>
+                    <td data-label="Notlar">Mandarake Complex yürüyerek. Vintage figür ve manga buluşması.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">18:00</td>
+                    <td data-label="Bölge">Akihabara</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/squareenixcafe" target="_blank">Anime Temalı Kafe</a></td>
+                    <td data-label="Notlar">Yürüyerek. Square Enix veya Maid Cafe gibi tematik bir mola.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">20:00</td>
+                    <td data-label="Bölge">Akihabara</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/kandamyojin" target="_blank">Kanda Myojin Tapınağı</a></td>
+                    <td data-label="Notlar">Elektronikçilerin de dua ettiği gece ışıklandırılan samuray tapınağı.</td>
+                </tr>
             </tbody>
         </table>
 
         <h3>🥢 Yemek Mekanları (Akihabara & Yanaka)</h3>
         <ul class="yemek">
             <li><a href="https://maps.app.goo.gl/jangaraaki" target="_blank">Kyushu Jangara Ramen</a> <span class="desc">Akihabara'da yoğun, malzemesi bol ve çok doyurucu kült ramen dükkanı.</span></li>
-            <li><a href="https://maps.app.goo.gl/roastbeefohno" target="_blank">Roast Beef Ohno</a> <span class="desc">Pirincin üstüne yanardağ gibi yığılmış, tepesinde çiğ yumurta olan inanılmaz biftek dilimleri.</span></li>
+            <li><a href="https://maps.app.goo.gl/roastbeefohno" target="_blank">Roast Beef Ohno</a> <span class="desc">Pirincin üstüne yanardağ gibi yığılmış, tepesinde çiğ yumurta olan incecik biftekler.</span></li>
             <li><a href="https://maps.app.goo.gl/marugo" target="_blank">Tonkatsu Marugo</a> <span class="desc">Michelin rehberliğinde yer alan, bölgenin bir numaralı domuz/tavuk pane mekanı.</span></li>
             <li><a href="https://maps.app.goo.gl/uobeiyaki" target="_blank">Uobei Akihabara</a> <span class="desc">Elektronik mağazasının hemen dibinde, dokunmatik ekranlı hızlı ve çok ucuz sushi.</span></li>
-            <li><a href="https://maps.app.goo.gl/kandamatsuya" target="_blank">Kanda Matsuya</a> <span class="desc">Asırlık tarihi binada çok geleneksel Soba eriştesi (Anime dünyasından bir an için kaçış).</span></li>
+            <li><a href="https://maps.app.goo.gl/kandamatsuya" target="_blank">Kanda Matsuya</a> <span class="desc">Asırlık tarihi binada çok geleneksel Soba eriştesi.</span></li>
         </ul>
 
         <h3>☕ Kafeler</h3>
         <ul class="kafe">
             <li><a href="https://maps.app.goo.gl/kayabacoffee" target="_blank">Kayaba Coffee (Yanaka)</a> <span class="desc">1938'den kalma evde, omlet sandviç (Tamago Sando) ve kahve.</span></li>
-            <li><a href="https://maps.app.goo.gl/squareenix" target="_blank">Square Enix Cafe</a> <span class="desc">Planınızdaki temalı kafe! Final Fantasy gibi oyun temalı yemek ve ürünler.</span></li>
+            <li><a href="https://maps.app.goo.gl/squareenix" target="_blank">Square Enix Cafe</a> <span class="desc">Final Fantasy gibi oyun temalı yemek ve ürünler sunan konsept mekan.</span></li>
             <li><a href="https://maps.app.goo.gl/vaultcoffee" target="_blank">Vault Coffee</a> <span class="desc">Akihabara'nın neon gürültüsünden kaçıp rahat koltuklarda sessizce kahve içilen yer.</span></li>
         </ul>
     </div>
@@ -435,11 +586,36 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">08:30</td><td data-label="Bölge">Fuji</td><td data-label="Etkinlik">Shinjuku ➔ Kawaguchiko</td><td data-label="Notlar">Shinjuku'dan otoban otobüsüyle direkt göle iniş.</td></tr>
-                <tr><td class="time-col" data-label="Saat">10:30</td><td data-label="Bölge">Fuji</td><td data-label="Etkinlik">Oishi Park</td><td data-label="Notlar">Göl, lavanta tarlaları ve Fuji manzarası.</td></tr>
-                <tr><td class="time-col" data-label="Saat">13:30</td><td data-label="Bölge">Fuji</td><td data-label="Etkinlik">Iyashi no Sato</td><td data-label="Notlar">Sazdan çatılı geleneksel eski Japon köyü gezisi.</td></tr>
-                <tr><td class="time-col" data-label="Saat">17:00</td><td data-label="Bölge">Fuji ➔ Tok</td><td data-label="Etkinlik">Tokyo'ya Otobüsle Dönüş</td><td data-label="Notlar">Yer üstünden manzaralı ve dinlendirici yolculuk.</td></tr>
-                <tr><td class="time-col" data-label="Saat">19:30</td><td data-label="Bölge">Shinjuku</td><td data-label="Etkinlik">Omoide Yokocho</td><td data-label="Notlar">Dönüşte dar sokakta kömür ateşinde Yakitori (şiş).</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">08:30</td>
+                    <td data-label="Bölge">Fuji</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/shinjukubusterminal" target="_blank">Shinjuku ➔ Kawaguchiko</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/fujibus" target="_blank">Shinjuku Expressway Bus Terminal</a>'den direkt Fuji otobüsü.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">10:30</td>
+                    <td data-label="Bölge">Fuji</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/oishipark" target="_blank">Oishi Park</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/kawaguchikoredline" target="_blank">Kawaguchiko Red Line Otobüsü</a>. Lavanta ve Fuji manzarası.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">13:30</td>
+                    <td data-label="Bölge">Fuji</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/iyashinosato" target="_blank">Iyashi no Sato</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/greenlinebus" target="_blank">Omni Bus (Green Line)</a>. Sazdan çatılı eski Japon köyü.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">17:00</td>
+                    <td data-label="Bölge">Fuji ➔ Tok</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/highwaybusreturn" target="_blank">Tokyo'ya Otobüsle Dönüş</a></td>
+                    <td data-label="Notlar">Kawaguchiko istasyonundan otoban otobüsü ile Shinjuku'ya dönüş.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">19:30</td>
+                    <td data-label="Bölge">Shinjuku</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/omoideyokocho" target="_blank">Omoide Yokocho</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jrshinjuku" target="_blank">Shinjuku İstasyonu Yanı</a>. Dar sokakta kömür ateşinde Yakitori (şiş).</td>
+                </tr>
             </tbody>
         </table>
 
@@ -467,10 +643,30 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">10:30</td><td data-label="Bölge">Harajuku</td><td data-label="Etkinlik">Meiji Jingu Tapınağı</td><td data-label="Notlar">JR Harajuku. Devasa ağaçlar arasında Şinto ruhu.</td></tr>
-                <tr><td class="time-col" data-label="Saat">13:30</td><td data-label="Bölge">Harajuku</td><td data-label="Etkinlik">Adidas Originals (Cat Street)</td><td data-label="Notlar">Yürüyerek. Batıkan Bey için özel Sneaker avı.</td></tr>
-                <tr><td class="time-col" data-label="Saat">16:00</td><td data-label="Bölge">Shibuya</td><td data-label="Etkinlik">Shibuya Yaya Geçidi</td><td data-label="Notlar">Dünyanın en kalabalık yaya geçidinden geçiş.</td></tr>
-                <tr><td class="time-col" data-label="Saat">17:30</td><td data-label="Bölge">Shibuya</td><td data-label="Etkinlik">Nintendo Store Tokyo</td><td data-label="Notlar">Shibuya Parco AVM'de oyun dünyası alışverişi.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">10:30</td>
+                    <td data-label="Bölge">Harajuku</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/meijijingu" target="_blank">Meiji Jingu Tapınağı</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jrharajuku" target="_blank">JR Yamanote Hattı (Harajuku)</a>. Devasa orman içinde Şinto ruhu.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">13:30</td>
+                    <td data-label="Bölge">Harajuku</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/adidasoriginals" target="_blank">Adidas Originals (Cat St)</a></td>
+                    <td data-label="Notlar">Yürüyerek "Cat Street" caddesine geçiş. Limitli sneaker arayışı.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">16:00</td>
+                    <td data-label="Bölge">Shibuya</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/shibuyacrossing" target="_blank">Shibuya Yaya Geçidi</a></td>
+                    <td data-label="Notlar">Cat Street'ten yürüyerek veya <a href="http://googleusercontent.com/maps.google.com/jrshibuya" target="_blank">JR Shibuya İst.</a> ile varış.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">17:30</td>
+                    <td data-label="Bölge">Shibuya</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/nintendotokyo" target="_blank">Nintendo Store Tokyo</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/shibuyaparco" target="_blank">Shibuya Parco AVM</a> 6. katta oyun dünyası alışverişi.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -498,10 +694,30 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">10:30</td><td data-label="Bölge">Asakusa</td><td data-label="Etkinlik">Senso-ji Tapınağı</td><td data-label="Notlar">Geleneksel tapınak ve Nakamise çarşı sokağı.</td></tr>
-                <tr><td class="time-col" data-label="Saat">13:30</td><td data-label="Bölge">Kappabashi</td><td data-label="Etkinlik">Japon Şef Bıçağı Yapımı</td><td data-label="Notlar">Yürüyerek. İsminize özel çelik şef bıçağı alımı.</td></tr>
-                <tr><td class="time-col" data-label="Saat">16:00</td><td data-label="Bölge">Sumida</td><td data-label="Etkinlik">Sumida Akvaryumu (Amano)</td><td data-label="Notlar">Bizzat Takashi Amano tasarımı Doğa Akvaryumları.</td></tr>
-                <tr><td class="time-col" data-label="Saat">18:30</td><td data-label="Bölge">Sumida</td><td data-label="Etkinlik">Sumida Nehri Yürüyüşü</td><td data-label="Notlar">Nehir kenarında Skytree kulesine karşı yürüyüş.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">10:30</td>
+                    <td data-label="Bölge">Asakusa</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/sensoji" target="_blank">Senso-ji Tapınağı</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/ginzalineasakusa" target="_blank">Metro Ginza Hattı (Asakusa)</a>. Çarşı ve dev fenerli tapınak.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">13:30</td>
+                    <td data-label="Bölge">Kappabashi</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/kappabashi" target="_blank">Japon Şef Bıçağı Yapımı</a></td>
+                    <td data-label="Notlar">Asakusa'dan yürüyerek Kappabashi mutfak sokağına geçiş.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">16:00</td>
+                    <td data-label="Bölge">Sumida</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/sumidaaquarium" target="_blank">Sumida Akvaryumu (Amano)</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/tobuskytreeline" target="_blank">Tobu Skytree Hattı</a> veya yürüyerek. Doğa akvaryumları sergisi.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">18:30</td>
+                    <td data-label="Bölge">Sumida</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/sumidariver" target="_blank">Sumida Nehri Yürüyüşü</a></td>
+                    <td data-label="Notlar">Nehir kenarında Skytree kulesinin ışıklarına karşı yürüyüş.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -511,7 +727,7 @@
             <li><a href="https://maps.app.goo.gl/daikokuya" target="_blank">Daikokuya Tempura</a> <span class="desc">Koyu susam yağıyla kızaran, Asakusa'nın asırlık meşhur susamlı karidesleri.</span></li>
             <li><a href="https://maps.app.goo.gl/asakusaunana" target="_blank">Asakusa Unana</a> <span class="desc">Sokakta gezerken alabileceğiniz ızgara edilmiş nefis yılan balığı pirinç topları.</span></li>
             <li><a href="https://maps.app.goo.gl/katsukichiasakusa" target="_blank">Katsukichi Asakusa</a> <span class="desc">Ahşap ve çok geleneksel bir ortamda harika Tonkatsu (şinitzel) yiyebileceğiniz yer.</span></li>
-            <li><a href="https://maps.app.goo.gl/rokuringstokyo" target="_blank">Rokurinsha (Skytree Şubesi)</a> <span class="desc">Sumida Akvaryumu binasının alt katında, ünlü koyu bandırmalı rameni bulabilirsiniz.</span></li>
+            <li><a href="https://maps.app.goo.gl/rokuringstokyo" target="_blank">Rokurinsha (Skytree)</a> <span class="desc">Sumida Akvaryumu binasının alt katında, ünlü koyu bandırmalı rameni bulabilirsiniz.</span></li>
         </ul>
 
         <h3>☕ Kafeler</h3>
@@ -529,11 +745,36 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">10:30</td><td data-label="Bölge">Suidobashi</td><td data-label="Etkinlik">Koishikawa Korakuen</td><td data-label="Notlar">JR Suidobashi. Muazzam peyzaj ve Dev Koi Havuzu.</td></tr>
-                <tr><td class="time-col" data-label="Saat">13:30</td><td data-label="Bölge">Bunkyo</td><td data-label="Etkinlik">Cafe Kingyo-zaka</td><td data-label="Notlar">Yürüyerek. 350 yıllık kafede Japon Balıkları ve çay.</td></tr>
-                <tr><td class="time-col" data-label="Saat">15:30</td><td data-label="Bölge">Hibiya</td><td data-label="Etkinlik">Hibiya Parkı (Death Note)</td><td data-label="Notlar">JR Yurakucho. Light ve Naomi'nin karlı yürüyüş rotası.</td></tr>
-                <tr><td class="time-col" data-label="Saat">16:30</td><td data-label="Bölge">Kasumigaseki</td><td data-label="Etkinlik">Polis Genel Merkezi (NPA)</td><td data-label="Notlar">Yürüyerek. L ve Kira soruşturmasının kalbi (Dışarıdan).</td></tr>
-                <tr><td class="time-col" data-label="Saat">17:30</td><td data-label="Bölge">Ginza</td><td data-label="Etkinlik">Art Aquarium Museum</td><td data-label="Notlar">Karanlıkta sanat ve Japon Balıkları görsel şöleni.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">10:30</td>
+                    <td data-label="Bölge">Suidobashi</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/koishikawa" target="_blank">Koishikawa Korakuen</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jrsuidobashi" target="_blank">JR Chuo-Sobu (Suidobashi)</a>. Muazzam peyzaj ve Dev Koi Havuzu.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">13:30</td>
+                    <td data-label="Bölge">Bunkyo</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/cafekingyozaka" target="_blank">Cafe Kingyo-zaka</a></td>
+                    <td data-label="Notlar">Bahçeden yürüyerek. 350 yıllık kafede Japon balıkları izleme.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">15:30</td>
+                    <td data-label="Bölge">Hibiya</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/hibiyapark" target="_blank">Hibiya Parkı (Death Note)</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jryurakucho" target="_blank">JR Yamanote (Yurakucho)</a>. İkonik karlı yürüyüş rotası.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">16:30</td>
+                    <td data-label="Bölge">Kasumigaseki</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/npajapan" target="_blank">Polis Genel Merkezi (NPA)</a></td>
+                    <td data-label="Notlar">Parktan yürüyerek. L ve Kira soruşturmasının binası (Dışarıdan).</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">17:30</td>
+                    <td data-label="Bölge">Ginza</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/artaquarium" target="_blank">Art Aquarium Museum</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/ginzametro" target="_blank">Metro ile Ginza</a>. Karanlıkta sanat ve ışıklı akvaryum şöleni.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -561,9 +802,24 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">11:30</td><td data-label="Bölge">Kagurazaka</td><td data-label="Etkinlik">Eski Geyşa Mahallesi</td><td data-label="Notlar">JR Iidabashi. Parke taşlı, siyah ahşap duvarlı sokaklar.</td></tr>
-                <tr><td class="time-col" data-label="Saat">14:30</td><td data-label="Bölge">Kagurazaka</td><td data-label="Etkinlik">Tokyo Daijingu Tapınağı</td><td data-label="Notlar">Yürüyerek. Geleneksel Şinto düğünlerine denk gelme.</td></tr>
-                <tr><td class="time-col" data-label="Saat">17:00</td><td data-label="Bölge">Ginza</td><td data-label="Etkinlik">Serbest Zaman / Itoya</td><td data-label="Notlar">12 katlı Itoya kırtasiyesini gezme veya dinlenme.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">11:30</td>
+                    <td data-label="Bölge">Kagurazaka</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/kagurazaka" target="_blank">Eski Geyşa Mahallesi</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/jriidabashi" target="_blank">JR Chuo Hattı (Iidabashi)</a>. Siyah ahşap duvarlı sokaklar.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">14:30</td>
+                    <td data-label="Bölge">Kagurazaka</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/tokyodaijingu" target="_blank">Tokyo Daijingu Tapınağı</a></td>
+                    <td data-label="Notlar">Ara sokaklardan yürüyerek. Geleneksel Şinto düğünlerine denk gelme.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">17:00</td>
+                    <td data-label="Bölge">Ginza</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/itoya" target="_blank">Serbest Zaman / Itoya</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/ginzastation" target="_blank">Metro ile Ginza'ya geçiş</a>. 12 katlı devasa Itoya kırtasiyesi.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -591,10 +847,30 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">11:00</td><td data-label="Bölge">Marunouchi</td><td data-label="Etkinlik">İmparatorluk Doğu Bahçeleri</td><td data-label="Notlar">Tokyo İstasyonu yakını. Edo kalesi hendekleri.</td></tr>
-                <tr><td class="time-col" data-label="Saat">14:00</td><td data-label="Bölge">Marunouchi</td><td data-label="Etkinlik">Marunouchi Caddesi</td><td data-label="Notlar">Geniş ağaçlıklı bulvarda son kahve molası.</td></tr>
-                <tr><td class="time-col" data-label="Saat">16:30</td><td data-label="Bölge">Merkez</td><td data-label="Etkinlik">Son Hediyelikler</td><td data-label="Notlar">Don Quijote veya Daiso'dan matcha ve abur cubur.</td></tr>
-                <tr><td class="time-col" data-label="Saat">20:00</td><td data-label="Bölge">Tokyo</td><td data-label="Etkinlik">Valiz Toparlama</td><td data-label="Notlar">Otele dönüş ve tüm alınanların yerleştirilmesi.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">11:00</td>
+                    <td data-label="Bölge">Marunouchi</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/imperialpalace" target="_blank">İmparatorluk Doğu Bahçeleri</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/tokyostation" target="_blank">Tokyo İstasyonu</a> çıkışı yürüyerek. Edo kalesi hendekleri.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">14:00</td>
+                    <td data-label="Bölge">Marunouchi</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/marunouchistreet" target="_blank">Marunouchi Caddesi</a></td>
+                    <td data-label="Notlar">Geniş ağaçlıklı tuğla binalı bulvarda son vitrinler ve kahve molası.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">16:30</td>
+                    <td data-label="Bölge">Merkez</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/donquijote" target="_blank">Son Hediyelikler (Don Quijote)</a></td>
+                    <td data-label="Notlar">Otelinizin yakınındaki bir <a href="http://googleusercontent.com/maps.google.com/daiso" target="_blank">Daiso</a> veya Donki şubesinden alınabilir.</td>
+                </tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">20:00</td>
+                    <td data-label="Bölge">Tokyo</td>
+                    <td data-label="Etkinlik">Valiz Toparlama</td>
+                    <td data-label="Notlar">Otele dönüş ve tüm alınan hediye/kıyafetlerin yerleştirilmesi.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -622,7 +898,12 @@
                 <tr><th>Saat</th><th>Şehir/Bölge</th><th>Etkinlik / Mekan</th><th>Ulaşım / Notlar</th></tr>
             </thead>
             <tbody>
-                <tr><td class="time-col" data-label="Saat">10:00</td><td data-label="Bölge">Tokyo</td><td data-label="Etkinlik">Havalimanına Transfer</td><td data-label="Notlar">Suica/Pasmo kartınızla ulaşıp veda kahvesi.</td></tr>
+                <tr>
+                    <td class="time-col" data-label="Saat">10:00</td>
+                    <td data-label="Bölge">Tokyo</td>
+                    <td data-label="Etkinlik"><a href="http://googleusercontent.com/maps.google.com/airporttransfer" target="_blank">Havalimanına Transfer</a></td>
+                    <td data-label="Notlar"><a href="http://googleusercontent.com/maps.google.com/naritaexpress" target="_blank">JR Narita Express (N'EX)</a> veya Havalimanı Otobüsü ile geçiş.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -659,7 +940,6 @@
         document.getElementById(selectedValue).style.display = "block";
     }
 
-    // Sayfa ilk yüklendiğinde 1. günü açık bırak
     window.onload = function() {
         openSelectedTab();
     };
