@@ -622,7 +622,7 @@
             <h3>🥢 Yemek Mekanları</h3>
             <ul class="yemek">
                 <li><a href="https://maps.google.com/?q=Nanzenji+Junsei" target="_blank">Nanzenji Junsei</a> <span class="desc">Rüya gibi bir bahçeye bakarak tapınak bölgesi klasiği "Sıcak Tofu" (Yudofu) yemek.</span></li>
-                <li><a href="https://maps.google.com/?q=Okutan+Nanzenji" target="_blank">Okutan Nanzenji</a> <span class="desc">380 yıllık tarihi option bölgedeki en eski, en otantik tofu restoranlarından biri.</span></li>
+                <li><a href="https://maps.google.com/?q=Okutan+Nanzenji" target="_blank">Okutan Nanzenji</a> <span class="desc">380 yıllık tarihiyle bölgedeki en eski, en otantik tofu restoranlarından biri.</span></li>
                 <li><a href="https://maps.google.com/?q=Omen+Ginkakuji" target="_blank">Omen Ginkakuji</a> <span class="desc">Tofu tercih etmeyenler için Gümüş Tapınak girişinde ev yapımı harika Udon.</span></li>
                 <li><a href="https://maps.google.com/?q=Hinode+Udon" target="_blank">Hinode Udon</a> <span class="desc">Filozofun Yolu yakınlarında, köri soslu enfes Udon eriştesi yapan esnaf lokantası.</span></li>
                 <li><a href="https://maps.google.com/?q=Gion+Owatari" target="_blank">Gion Owatari</a> <span class="desc">Akşama Kyoto mutfağının zirvesi, üst düzey ve şık bir şef restoranı deneyimi.</span></li>
@@ -1172,28 +1172,10 @@
 
 <script>
     if ('serviceWorker' in navigator) {
-        const swCode = `
-            const CACHE_NAME = 'japonya-gezi-v1';
-            self.addEventListener('install', event => {
-                event.waitUntil(
-                    caches.open(CACHE_NAME).then(cache => {
-                        return cache.addAll([location.href.split('?')[0], location.href]);
-                    })
-                );
-            });
-            self.addEventListener('fetch', event => {
-                event.respondWith(
-                    caches.match(event.request).then(response => {
-                        return response || fetch(event.request);
-                    }).catch(() => {
-                        return caches.match(location.href);
-                    })
-                );
-            });
-        `;
-        const blob = new Blob([swCode], { type: 'application/javascript' });
-        const swUrl = URL.createObjectURL(blob);
-        navigator.serviceWorker.register(swUrl).catch(err => console.log('SW Hata:', err));
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+                .catch(err => console.log('SW Hata:', err));
+        });
     }
 
     let jpyToTryRate = parseFloat(localStorage.getItem('jpyRate')) || 0.21; 
